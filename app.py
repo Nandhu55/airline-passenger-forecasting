@@ -1,25 +1,22 @@
 import streamlit as st
 
-def load_css():
-
-    with open("assets/styles.css") as f:
-
-        st.markdown(
-
-            f"<style>{f.read()}</style>",
-
-            unsafe_allow_html=True
-
-        )
-
-load_css()
-
+# MUST BE THE FIRST STREAMLIT COMMAND
 st.set_page_config(
     page_title="Airline Passenger Forecasting",
     page_icon="✈️",
     layout="wide",
     initial_sidebar_state="expanded"
 )
+
+def load_css():
+    with open("assets/styles.css") as f:
+        st.markdown(
+            f"<style>{f.read()}</style>",
+            unsafe_allow_html=True
+        )
+
+# Load CSS AFTER set_page_config
+load_css()
 
 st.title("✈️ Airline Passenger Forecasting")
 
@@ -39,4 +36,3 @@ Use the sidebar to navigate through the complete forecasting pipeline.
 """)
 
 st.success("Select a page from the sidebar to begin.")
-
