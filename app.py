@@ -1,6 +1,5 @@
 import streamlit as st
 
-# MUST BE THE FIRST STREAMLIT COMMAND
 st.set_page_config(
     page_title="Airline Passenger Forecasting",
     page_icon="✈️",
@@ -15,24 +14,35 @@ def load_css():
             unsafe_allow_html=True
         )
 
-# Load CSS AFTER set_page_config
 load_css()
 
-st.title("✈️ Airline Passenger Forecasting")
+st.logo("assets/logo.png")
+
+st.sidebar.title("✈️ Airline Forecast AI")
+
+st.sidebar.markdown("---")
+
+st.title("✈️ Airline Passenger Forecasting System")
 
 st.markdown("""
-Welcome to the **Airline Passenger Forecasting Dashboard**.
+### Welcome
 
-Use the sidebar to navigate through the complete forecasting pipeline.
+An AI-powered dashboard for forecasting airline passenger traffic using
+Deep Learning (RNN, LSTM & GRU).
 
-### Features
-- 📂 Load Dataset
-- ⚙️ Data Preprocessing
-- 🔄 Sequence Generation
-- 🤖 Deep Learning Model (LSTM/RNN/GRU)
-- 🚀 Train Model
-- 📈 Evaluate Model
-- 🔮 Forecast Future Passengers
+Use the navigation menu on the left to explore each stage of the
+forecasting pipeline.
 """)
 
-st.success("Select a page from the sidebar to begin.")
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    st.metric("Models", "3", "RNN • LSTM • GRU")
+
+with col2:
+    st.metric("Forecast", "Future Ready")
+
+with col3:
+    st.metric("Framework", "TensorFlow")
+
+st.info("👈 Select a module from the sidebar to begin.")
