@@ -16,7 +16,7 @@ def load_css():
 
 load_css()
 
-st.logo("assets/logo.png")
+st.logo("assets/logo.jpg")
 
 st.sidebar.title("✈️ Airline Forecast AI")
 
