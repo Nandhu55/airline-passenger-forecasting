@@ -1,40 +1,77 @@
+/* Main App */
+.stApp{
+    background:#f4f7fb;
+    color:#222;
+}
+
+/* Sidebar */
 section[data-testid="stSidebar"]{
-    background:#081321;
+    background:#0F172A;
 }
 
 section[data-testid="stSidebar"] *{
-    color:white;
+    color:white !important;
 }
 
-.stApp{
-    background:#f6f8fc;
-}
-
+/* Headings */
 h1{
-    color:#0d6efd;
+    color:#1565C0 !important;
+    font-size:48px;
     font-weight:800;
 }
 
-.stMetric{
-    border-radius:15px;
-    background:white;
-    padding:15px;
-    box-shadow:0 5px 15px rgba(0,0,0,.08);
+h2{
+    color:#1E3A8A !important;
+    font-weight:700;
 }
 
+h3{
+    color:#2563EB !important;
+}
+
+/* Paragraphs */
+p{
+    color:#374151 !important;
+    font-size:18px;
+    line-height:1.8;
+}
+
+/* Lists */
+li{
+    color:#374151 !important;
+    font-size:17px;
+}
+
+/* Buttons */
 .stButton>button{
     width:100%;
+    background:#2563EB;
+    color:white;
+    border:none;
     border-radius:12px;
     height:48px;
-    background:#0d6efd;
-    color:white;
     font-weight:bold;
 }
 
 .stButton>button:hover{
-    background:#084298;
+    background:#1D4ED8;
 }
 
+/* Metric Cards */
 div[data-testid="stMetric"]{
+    background:white;
     border-radius:15px;
+    padding:15px;
+    box-shadow:0 6px 18px rgba(0,0,0,.08);
+}
+
+/* Tables */
+table{
+    border-radius:10px;
+    overflow:hidden;
+}
+
+/* Success/Info boxes */
+.stAlert{
+    border-radius:12px;
 }
